@@ -48,6 +48,27 @@ button {
 button:hover {
   background: #1f73ab;
 }
+.button-container {
+  position: relative;
+}
+.edit, .delete{
+    height: 44px;
+    width: 44px;
+}
+.delete{
+right:0;
+top:0;
+position:absolute;
+    background: #e74c3c;
+    color: white;
+}
+.edit{
+right:54px;
+top:0;
+position:absolute;
+    background: #f1c40f;
+    color: white;
+}
 
 .post {
   border: 1px solid #ddd;

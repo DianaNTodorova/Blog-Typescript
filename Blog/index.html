@@ -4,39 +4,29 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
-    <link rel="stylesheet" href="/style.css" />
+    <title>Simple Blog</title>
+
+<link rel="stylesheet"
+ href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+ 
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simple Blog</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="container">
-    <h1>My Blog</h1>
+    <div class="container">
+      <h1>My Blog</h1>
 
-    <!-- Blog Form -->
-    <form id="blog-form">
-      <input type="text" id="title" placeholder="Title" required />
-      <input type="text" id="author" placeholder="Author" required />
-      <textarea id="body" placeholder="Write your post..." required></textarea>
-      <button type="submit">Add Post</button>
-    </form>
+      <form id="blog-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <textarea id="content" placeholder="Write your post..." required></textarea>
+        <button type="submit">Add Post</button>
+      </form>
 
-    <hr>
+      <hr>
 
-    <!-- Blog Posts List -->
-    <div id="posts"></div>
-  </div>
+      <div id="posts"></div>
+    </div>
 
-
-</body>
-</html>
-
+    <script src="app.js" defer></script>
   </body>
 </html>
