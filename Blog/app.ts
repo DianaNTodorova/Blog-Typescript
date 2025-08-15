@@ -20,6 +20,7 @@ function renderPosts() {
         const postElement = document.createElement('div');
         postElement.className = 'post';
         postElement.innerHTML = `
+
             <div class="button-container">
             <button class="edit" data-id="${post.id}">
             <span class="material-symbols-outlined">
@@ -34,7 +35,7 @@ function renderPosts() {
             <h3>Title: ${post.title}</h3>
             <p><strong>Author:</strong> ${post.author}</p>
             <p>Content: ${post.content}</p>
-  
+
         `;
         postList.appendChild(postElement);
     });
@@ -65,4 +66,26 @@ postForm.addEventListener('submit', (event: Event) => {
     postForm.reset();   
     titleInput.focus(); 
 });
+// handle delete and edit actions
+postList.addEventListener('click', (event: MouseEvent) => {
+ const target = event.target as HTMLElement;
+ const button= target.closest('button');
+ const id= button?.getAttribute('data-id');
+if(button?.classList.contains('delete')) {
+    posts = posts.filter(post => post.id.toString() !== id);
+    renderPosts();
+} else if (button?.classList.contains('edit')) {
+    const post = posts.find(post => post.id.toString() === id);
+    if (post) {
+        titleInput.value = post.title;
+        contentInput.value = post.content;
+        authorInput.value = post.author;
+        posts = posts.filter(p => p.id.toString() !== id); // Remove the post being edited
+        renderPosts();
+    }
+}
+})
+
+    
+
 });

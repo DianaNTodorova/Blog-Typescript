@@ -51,6 +51,9 @@ button:hover {
 .button-container {
   position: relative;
 }
+hr{
+  margin-top: 15px;
+}
 .edit, .delete{
     height: 44px;
     width: 44px;
@@ -82,6 +85,14 @@ position:absolute;
   justify-content: space-between;
   align-items: center;
 }
+
+#posts{
+  margin: 20px;
+  max-width: 700px;
+  margin: 30px auto;
+  background: white;
+}
+
 
 .post-buttons button {
   margin-left: 5px;
