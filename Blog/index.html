@@ -14,13 +14,13 @@
   <body>
     <div class="container">
       <h1>My Blog</h1>
-<div>
+    <div class="container-sort">
     <label for="sort">Sort by:</label>
     <select id="sort">
         <option value="timestamp">Newest First</option>
         <option value="author">Author (A-Z)</option>
     </select>
-</div>
+    </div>
       <form id="blog-form">
         <input type="text" id="title" placeholder="Title" required />
         <input type="text" id="author" placeholder="Author" required />
@@ -28,7 +28,6 @@
         <button type="submit">Add Post</button>
       </form>
 
-      <hr>
        <div id="posts"></div>
     </div>
    

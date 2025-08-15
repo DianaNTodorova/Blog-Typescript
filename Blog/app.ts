@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const authorInput = document.getElementById('author') as HTMLInputElement;
     const sortSelect = document.getElementById('sort') as HTMLSelectElement;
 
-    // Load posts from localStorage
+    // localStorage
     let posts: BlogPost[] = JSON.parse(localStorage.getItem('blogPosts') || '[]');
 
     function savePosts() {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderPosts() {
         postList.innerHTML = '';
 
-        // Sort before rendering
+        // Sorting logic
         let sortedPosts = [...posts];
         if (sortSelect?.value === 'author') {
             sortedPosts.sort((a, b) => a.author.localeCompare(b.author));
